@@ -78,3 +78,53 @@ yarn install
 
 # Start the local development server
 yarn develop
+
+This will start a server on https://localhost:8080.
+
+Step 2: Configure the manifest.lkml for Development
+In your Looker project, open the manifest.lkml file and ensure the url parameter points to your local server.
+
+application: "tabbed_dashboards_app" {
+  label: "Advanced Tabbed Dashboards"
+  url: "https://localhost:8080/bundle.js"
+  entitlements: {
+    use_embeds: yes
+    core_api_methods: ["run_inline_query"]
+    external_api_urls: []
+  }
+}
+
+Step 3: View and Test
+In your Looker instance, go to the "Browse" menu and find your extension under "Applications." You can now see your extension running and test your changes live.
+
+Part C: Deploying to Production
+Once you are ready to share the extension with other users, follow these steps to publish it to your Looker instance.
+
+Step 1: Build the Production File
+In your terminal, stop the development server (Ctrl + C) and run the build command:
+
+yarn build
+
+This creates a dist folder containing your entire application bundled into a single bundle.js file.
+
+Step 2: Upload the bundle.js File to Looker
+Drag and drop the newly created dist/bundle.js file into your Looker project's file browser.
+
+Step 3: Update the manifest.lkml for Production
+Edit your manifest.lkml file to tell Looker to use the uploaded file instead of the development server.
+
+application: "tabbed_dashboards_app" {
+  label: "Advanced Tabbed Dashboards"
+  # Comment out the development URL
+  # url: "https://localhost:8080/bundle.js"
+  # Uncomment the file parameter
+  file: "bundle.js"
+  entitlements: {
+    use_embeds: yes
+    core_api_methods: ["run_inline_query"]
+    external_api_urls: []
+  }
+}
+
+Step 4: Commit and Deploy
+Finally, commit your changes in the Looker IDE and deploy your project to production.
