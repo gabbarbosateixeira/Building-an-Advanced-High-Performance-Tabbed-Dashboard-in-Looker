@@ -12,9 +12,9 @@ This guide walks through the architecture and implementation of a custom, multi-
 
 ### Future Features being added
 
-* **Cascade Filtering
-* **Better updating control
-* **Advanced filtering controls and customization
+* **Cascade Filtering**
+* **Better updating control**
+* **Advanced filtering controls and customization**
 
 ---
 
