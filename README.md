@@ -10,6 +10,12 @@ This guide walks through the architecture and implementation of a custom, multi-
 * **Advanced Date Filter**: A custom-built date filter with both "Presets" and a "Custom" calendar.
 * **High-Performance Architecture**: Built with modern React patterns to eliminate unnecessary reloads and ensure a smooth, instant-loading experience.
 
+### Future Features being added
+
+* **Cascade Filtering
+* **Better updating control
+* **Advanced filtering controls and customization
+
 ---
 
 ## Prerequisites
