@@ -1,4 +1,4 @@
-# Building an Advanced, High-Performance Tabbed Dashboard in Looker
+# Implementing Cross-Filtering and easyu management on Looker Tabbed Extension
 
 This guide walks through the architecture and implementation of a custom, multi-tab dashboard experience built as a Looker Extension. This project provides a clean, highly interactive, and performant way for users to explore related dashboards, serving as an advanced alternative to the basic example found in Looker's official documentation for [Creating a new Looker extension with components](https://cloud.google.com/looker/docs/components-example).
 
